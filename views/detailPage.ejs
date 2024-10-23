@@ -1,0 +1,112 @@
+<%- include ('./partials/header') %>
+
+    <div class="Title">
+        <h1>Détails de <%=pokemonDetails.nom%>
+        </h1>
+    </div>
+
+
+
+    <div class="big-Container">
+
+        <div class="img-container"><img class="pokemonImg" src="/img/<%=pokemonDetails.numero%>.png"
+                alt="<%=pokemonDetails.nom.toLowerCase()%>">
+        </div>
+
+
+        <div class="pokemon-details">
+
+            <h2>#<%=pokemonDetails.numero%>
+                    <%=pokemonDetails.nom%>
+            </h2>
+
+            <div class="type-container">
+                <% pokemonDetails.type.forEach(function(type) { %>
+                    <div class="type <%= type.toLowerCase() %>">
+                        <%= type %>
+                    </div>
+                    <% }); %>
+            </div>
+
+
+            <div>
+                <h3>Statistiques</h3>
+
+                <div class="row">
+                    <div class="stat-name">PV</div>
+                    <div class="stat-value">
+                        <%=pokemonDetails.pv%>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: <%= Math.min((pokemonDetails.pv / 255) * 100, 100) %>%;">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="stat-name">Attaque</div>
+                    <div class="stat-value">
+                        <%=pokemonDetails.attaque%>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress"
+                            style="width: <%= Math.min((pokemonDetails.attaque / 255) * 100, 100) %>%;"></div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="stat-name">Défense</div>
+                    <div class="stat-value">
+                        <%=pokemonDetails.defense%>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress"
+                            style="width: <%= Math.min((pokemonDetails.defense / 255) * 100, 100) %>%;"></div>
+                    </div>
+                </div>
+                <div class="row">
+
+                    <div class="stat-name">Attaque Spé.</div>
+                    <div class="stat-value">
+                        <%=pokemonDetails.attaque_spe%>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress"
+                            style="width: <%= Math.min((pokemonDetails.attaque_spe / 255) * 100, 100) %>%;">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+
+                    <div class="stat-name">Défense Spé</div>
+                    <div class="stat-value">
+                        <%=pokemonDetails.defense_spe%>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress"
+                            style="width: <%= Math.min((pokemonDetails.defense_spe / 255) * 100, 100) %>%;">
+                            <!-- Math.min(... , 100)la largeur de la barre ne dépasse jamais 100%. -->
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+
+                    <div class="stat-name">Vitesse</div>
+                    <div class="stat-value">
+                        <%=pokemonDetails.vitesse%>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress"
+                            style="width: <%= Math.min((pokemonDetails.vitesse / 255) * 100, 100) %>%;">
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>

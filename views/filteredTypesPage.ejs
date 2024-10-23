@@ -1,0 +1,28 @@
+<%- include ('./partials/header') %>
+
+    <p class="white-text-filteredTypes">Pokémons de type <%= type.charAt(0).toUpperCase() + type.slice(1) %>
+    </p>
+
+
+
+    <div class="articlesContainer">
+        <% if (pokemons.length> 0) { %>
+            <% pokemons.forEach(pokemon=> { %>
+                <article class="article">
+                    <header>
+                        <a href="/pokemon/<%= pokemon.numero %>">
+                            <img class="pokemonImg" src="/img/<%= pokemon.numero %>.png"
+                                alt="<%= pokemon.nom.toLowerCase() %>">
+                            <h2>#<%= pokemon.numero %>
+                                    <%= pokemon.nom %>
+                            </h2>
+                        </a>
+                    </header>
+                </article>
+                <% }) %>
+                    <% } else { %>
+                        <p>Aucun Pokémon trouvé de ce type.</p>
+                        <% } %>
+    </div>
+    <footer>
+        <a href="/">Revenir à la liste</a>

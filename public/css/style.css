@@ -1,0 +1,299 @@
+
+
+body {
+    background-color: #C14040;
+    font-family: 'Bree Serif', serif;
+   
+
+}
+
+a {
+    color: #EFE3E3;
+    text-decoration: none;
+    
+}
+
+
+.banner {
+    background-color: #EFE3E3;
+    height: 85px;
+    border-radius: 27px;
+    display: flex;
+    align-items: center;
+    margin: 20px;
+}
+
+.left-content {
+    flex: 1;
+}
+
+.right-content {
+    display: flex;
+    justify-content: flex-end;
+}
+
+header h1 {
+    margin: 15px;
+    font-weight: lighter;
+    color : #C2566A;
+}
+
+.subTitle1,
+.subTitle2 {
+    margin-right: 20px;
+    font-size: 1.3em;
+    color : #C2566A;
+}
+
+
+h2{
+    color :  #EFE3E3   ;
+    text-align: center;
+    font-size:1.5rem;
+}
+
+.articlesContainer {
+    padding: 1rem;
+    display: flex;       
+    flex-wrap: wrap; /* Les articles se regroupent sur plusieurs lignes */
+    justify-content: center; /* Centre les articles */
+    gap: 20px; /* Espace entre les articles */
+}
+
+.article {
+    width: calc(33.33% - 20px); /* Chaque article prend environ 1/3 de la ligne avec un espace entre eux */
+    background-color: #982C2C;
+    border-radius: 30px;
+    padding: 5px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centre le contenu des articles */
+    text-align: center; /* Centre le texte */
+    box-sizing: border-box; /* Pour inclure le padding dans la taille totale */
+}
+
+
+.articlesContainer img{
+    margin: auto; /* Centrer horizontalement */
+    max-width: 100%; /* Pour éviter le débordement des images */
+    
+}
+
+.Title {
+    color: #EFE3E3;
+    text-align: center;
+}
+
+.big-Container {
+    display : flex;
+    justify-content:center;
+    width: 100%;
+}
+
+.img-container {
+    width: 20%;
+   
+    padding: 20px;
+  
+}
+
+.img-container  img{
+    max-width: 100%
+}
+
+.pokemon-details {
+    width:30%;
+    background-color: #982C2C;
+    border-radius: 30px;
+    padding:20px;
+    color: white;
+ 
+}
+
+.pokemon-details h2 {
+    text-align: left;
+}
+
+
+.type-container {
+    display: flex; /* alignement des types sur la même ligne*/
+    gap: 10px; /* Espace entre les types */
+    margin-top: 10px;
+}
+
+.type {
+    padding: 10px 10px;
+    border-radius: 8px;
+    color: white;   
+    text-align: center;
+}
+
+
+.row {
+    display: flex;
+    justify-content: flex-start; /* Alignement à gauche */
+    align-items: center; /* Aligne verticalement les éléments */
+    padding: 10px 0; /* Espacement entre chaque ligne */
+    gap: 10px; /* Espace fixe entre les colonnes */
+}
+
+.stat-name, .stat-value, .progress-bar {
+    text-align: left;
+}
+
+.stat-name {
+    width: 20%; /* Largeur fixe pour le nom de la statistique */
+}
+
+.stat-value {
+    width: 15%; /* Largeur fixe pour la valeur */
+}
+
+.progress-bar {
+    width: 60%; /* Largeur fixe pour la barre de progression */
+    height: 20px;
+    background-color: #632b2b;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background-color: #fff;
+    transition: width 0.5s;
+}
+
+
+/* Conteneur de la liste des types */
+ul.types-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Espacement entre les éléments */
+    max-width: 90%; /* Limite la largeur totale à 90% de l'écran */
+}
+
+
+
+/* Style de base pour chaque type de Pokémon */
+.types-list li {
+    flex: 0 1 calc(25% - 20px); /* Chaque élément prend 25% de la largeur pour permettre 4 éléments par ligne */
+    margin-bottom: 20px; /* Espace entre les lignes */
+    padding: 20px;
+    border-radius: 7px;
+    font-size: 19px;
+    text-align: center;
+    color: white;
+    box-sizing: border-box; /* Pour inclure le padding dans la largeur totale */
+}
+
+
+/* Responsive Design pour tablette (en dessous de 768px) */
+@media (max-width: 768px) {
+   
+
+    .types-list li {
+        flex: 0 1 calc(50% - 20px); /* 2 éléments par ligne sur tablette */
+    }
+}
+
+/* Responsive Design pour mobile (en dessous de 480px) */
+@media (max-width: 480px) {
+
+   
+
+    .types-list li {
+        flex: 0 1 calc(100% - 20px); /* 1 élément par ligne sur mobile */
+    }
+}
+
+.white-text-types,.white-text-filteredTypes{
+    color: white;
+    font-size: 19px;
+    margin-left: 30px;
+    
+}
+
+footer{
+    text-align: center;
+}
+
+/* Couleurs spécifiques pour chaque type */
+.type.acier {
+    background-color: #aaaabb;
+}
+
+.type.combat {
+    background-color: #bb5544;
+}
+
+.type.dragon {
+    background-color: #7766ee;
+}
+
+.type.eau {
+    background-color: #3399ff;
+}
+
+.type.électrik {
+    background-color: #ffbb33;
+}
+
+.type.electrik{
+    background-color: #ffbb33;
+}
+
+.type.feu {
+    background-color: #ff4422;
+}
+
+.type.glace {
+    background-color: #77ddff;
+}
+
+.type.insecte {
+    background-color: #aabb22;
+}
+
+.type.normal {
+    background-color: #bbaabb;
+}
+
+.type.plante {
+    background-color: #77cc55;
+}
+
+.type.poison {
+    background-color: #aa5599;
+}
+
+.type.psy {
+    background-color: #ff5599;
+}
+
+.type.roche {
+    background-color: #bbaa66;
+}
+
+.type.sol {
+    background-color: #ddbb55;
+}
+
+.type.spectre {
+    background-color: #6666bb;
+}
+
+.type.ténèbres {
+    background-color: #665544;
+}
+
+.type.tenebres {
+    background-color: #665544;
+}
+
+.type.vol {
+    background-color: #6699ff;
+}

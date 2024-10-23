@@ -1,0 +1,25 @@
+<%- include ('./partials/header') %>
+    <main>
+
+        <div class="articlesContainer">
+            <% for (const article of pokedexInfos){%>
+                <article class="article">
+
+                    <header>
+                        <a href="/pokemon/<%= article.numero %>">
+                            <img class="pokemonImg" src="/img/<%=article.numero%>.png"
+                                alt="<%=article.nom.toLowerCase()%>">
+                            <h2>#<%=article.numero%>
+                                    <%=article.nom%>
+                            </h2>
+                        </a>
+                    </header>
+                </article>
+
+                <%}%>
+
+        </div>
+
+        </body>
+
+        </html>
