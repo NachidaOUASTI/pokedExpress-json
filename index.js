@@ -56,7 +56,13 @@ app.get('/types/:type', (request, response) => {
     response.render('filteredTypesPage', { pokemons: filteredPokemons, type });
 });
 
-// écoute du serveur
-app.listen(process.env.PORT || 3000, () => {
-    console.log(`Server running on port ${process.env.PORT || 3000}`);
-});
+
+// écoute du serveur (sera ignorée par Vercel, mais utile pour les tests en local)
+if (require.main === module) {
+    app.listen(process.env.PORT || 3000, () => {
+        console.log(`Server running on port ${process.env.PORT || 3000}`);
+    });
+}
+
+module.exports = app;
+/*  La ligne module.exports = app; permet à Vercel de démarrer l’application en mode sans serveur. */
