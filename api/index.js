@@ -18,13 +18,11 @@ app.use(express.static(path.join(__dirname, '../public'))); // Chemin correct po
 
 // Route d'accueil
 app.get('/', (request, response) => {
-    console.log("Received request for /"); // Log pour la route d'accueil
     response.render("homepage", { pokedexInfos });
 });
 
 // Route pour afficher un Pokémon par numéro
 app.get('/pokemon/:numero', (request, response) => {
-    console.log(`Received request for /pokemon/${request.params.numero}`); // Log pour la route de Pokémon
     const numero = parseInt(request.params.numero);
     const pokemonDetails = pokedexInfos.find(pokemon => pokemon.numero === numero);
     response.render("detailPage", {
@@ -35,13 +33,11 @@ app.get('/pokemon/:numero', (request, response) => {
 
 // Définition de la route pour accéder à la page des types de Pokémon
 app.get('/types', (request, response) => {
-    console.log("Received request for /types"); // Log pour la route des types
     response.render("typesPage", { pokedexInfos });
 });
 
 // Route pour afficher les Pokémon par type
 app.get('/types/:type', (request, response) => {
-    console.log(`Received request for /types/${request.params.type}`); // Log pour la route de type spécifique
     const type = request.params.type;
     const filteredPokemons = pokedexInfos.filter(pokemon => pokemon.type.includes(type));
     response.render('filteredTypesPage', { pokemons: filteredPokemons, type });

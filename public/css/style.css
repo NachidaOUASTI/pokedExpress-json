@@ -198,16 +198,108 @@ ul.types-list {
     .types-list li {
         flex: 0 1 calc(50% - 20px); /* 2 éléments par ligne sur tablette */
     }
+    header h1 {
+        font-size: 1.5em; /* Réduction de la taille de la police pour le titre */
+    }
+
+    .banner {
+        height: auto; /* Laissez la hauteur s'ajuster automatiquement */
+        flex-direction: column; /* Permet de mettre les éléments en colonne */
+        margin: 10px; /* Réduction de la marge */
+    }
+
+    .articlesContainer {
+        flex-direction: column; /* Alignez les articles verticalement sur tablette */
+        padding: 0.5rem; /* Réduction du padding */
+    }
+
+    .article {
+        width: 100%; /* Les articles prennent toute la largeur sur tablette */
+    }
+
+    .img-container {
+        width: 80%; /* Ajustement de la largeur de l'image */
+    }
+
+    .pokemon-details {
+        width: 80%; /* Ajustement de la largeur pour les détails */
+    }
+
 }
 
 /* Responsive Design pour mobile (en dessous de 480px) */
-@media (max-width: 480px) {
-
-   
+@media (max-width: 480px) {   
 
     .types-list li {
         flex: 0 1 calc(100% - 20px); /* 1 élément par ligne sur mobile */
     }
+    header h1 {
+        font-size: 1.2em; /* Réduction supplémentaire de la taille de la police */
+    }
+
+    .banner {
+        padding: 10px; /* Réduction du padding */
+    }
+    .big-Container {
+        flex-direction: column; /* Empile les éléments verticalement */
+        align-items: center; /* Centre les éléments horizontalement */
+        width: 100%; /* Prend toute la largeur */
+    }
+
+    .articlesContainer {
+        padding: 0; /* Suppression du padding */
+    }
+
+    .article {
+        width: 100%; /* Les articles prennent toute la largeur sur mobile */
+        padding: 10px; /* Ajout de padding pour les articles */
+    }
+
+    .img-container {
+        width: 100%; /* Prend toute la largeur */
+        display: flex;
+        justify-content: center; /* Centre l'image */
+        padding: 10px; /* Ajoute un espacement autour de l'image */
+    }
+
+    .img-container img {
+        max-width: 100%; /* L'image ne dépasse pas le conteneur */
+        height: auto; /* Garde les proportions de l'image */
+    }
+
+    .pokemon-details {
+        width: 90%; /* Ajustement de la largeur pour les détails */
+        padding: 10px; /* Réduction du padding */
+    }
+
+    .subTitle1,
+    .subTitle2 {
+        font-size: 1em; /* Réduction de la taille de la police pour les sous-titres */
+        margin-right: 10px; /* Ajustement de la marge */
+    }
+    .pokemon-details {
+        width: 90%; /* Ajustement de la largeur pour les détails */
+        background-color: #982C2C;
+        border-radius: 30px;
+        padding: 20px;
+        color: white;
+        margin-top: 20px; /* Ajoute de l'espace entre l'image et les détails */
+    }
+
+    .row {
+        flex-direction: column; /* Empile les éléments verticalement pour mobile */
+        align-items: flex-start; /* Aligne les éléments à gauche */
+    }
+
+    .stat-name {
+        width: auto; /* Laisse le nom de la statistique occuper seulement l'espace nécessaire */
+    }
+
+    .progress-bar {
+        width: 100%; /* Prend toute la largeur disponible */
+        margin-left: 0; /* Supprime l'espace à gauche */
+    }
+
 }
 
 .white-text-types,.white-text-filteredTypes{
