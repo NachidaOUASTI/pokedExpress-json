@@ -263,7 +263,7 @@ ul.types-list {
     }
 
     .img-container img {
-        max-width: 100%; /* L'image ne dépasse pas le conteneur */
+        max-width: 50%; /* L'image ne dépasse pas le conteneur */
         height: auto; /* Garde les proportions de l'image */
     }
 
@@ -287,19 +287,30 @@ ul.types-list {
     }
 
     .row {
-        flex-direction: column; /* Empile les éléments verticalement pour mobile */
-        align-items: flex-start; /* Aligne les éléments à gauche */
+        flex-direction: row; /* Aligne les éléments sur la même ligne pour mobile */
+        align-items: center; /* Aligne verticalement les éléments */
+        justify-content: space-between; /* Espace entre les colonnes */
     }
 
     .stat-name {
-        width: auto; /* Laisse le nom de la statistique occuper seulement l'espace nécessaire */
+        width: 29%; /* Ajustement de la largeur pour s'adapter sur la même ligne */
+        text-align: left; /* Alignement à gauche */
+    }
+    .stat-value {
+        width: 2%; /* Ajustement de la largeur pour s'adapter sur la même ligne */
+        text-align: center; /* Centrer la valeur */
     }
 
     .progress-bar {
-        width: 100%; /* Prend toute la largeur disponible */
+        width: 53%; /* Ajustement de la largeur pour s'adapter sur la même ligne */
         margin-left: 0; /* Supprime l'espace à gauche */
     }
 
+    .progress {
+        height: 20px; /* Hauteur de la barre de progression */
+        background-color: #fff;
+        transition: width 0.5s;
+    }
 }
 
 .white-text-types,.white-text-filteredTypes{
@@ -309,8 +320,14 @@ ul.types-list {
     
 }
 
-footer{
+/* footer{
     text-align: center;
+} */
+
+footer a {
+    margin-left: 1122px;
+    margin-top: 22px;
+    display: inline-block;
 }
 
 /* Couleurs spécifiques pour chaque type */
