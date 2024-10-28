@@ -22,6 +22,15 @@ footer a {
     margin-left: 0; /* Supprime le décalage */
 }
 
+.footer-detailPage{
+    padding: 20px;
+    margin-left: 400px;
+    font-size: 0.9em;
+
+}
+
+
+
 .banner {
     background-color: #EFE3E3;
     height: 85px;
