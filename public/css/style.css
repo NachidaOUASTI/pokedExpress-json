@@ -13,6 +13,11 @@ a {
     
 }
 
+footer a {
+    margin-left: 1122px;
+    margin-top: 22px;
+    display: inline-block;
+}
 
 .banner {
     background-color: #EFE3E3;
@@ -311,6 +316,15 @@ ul.types-list {
         background-color: #fff;
         transition: width 0.5s;
     }
+
+    footer {
+        padding: 20px;
+        text-align: center;
+        font-size: 0.9em;
+    }
+    footer a {
+        margin-left: 0; /* Supprime le décalage */
+    }
 }
 
 .white-text-types,.white-text-filteredTypes{
@@ -320,15 +334,7 @@ ul.types-list {
     
 }
 
-/* footer{
-    text-align: center;
-} */
 
-footer a {
-    margin-left: 1122px;
-    margin-top: 22px;
-    display: inline-block;
-}
 
 /* Couleurs spécifiques pour chaque type */
 .type.acier {
