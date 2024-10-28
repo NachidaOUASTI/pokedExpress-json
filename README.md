@@ -14,7 +14,7 @@ Commencez par installer express, et toute autre dépendance nécessaire avec npm
 Dans le terminal tapez:
 
 ```bash
-  node index.js
+  node api/index.js
 ```
 
 Ensuite, ouvrez votre navigateur et accédez à l'adresse http://localhost:3000.
