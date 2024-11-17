@@ -5,6 +5,10 @@
 pokedExpress-json est une application web qui permet de visualiser un Pokedex, une base de données complète des Pokémon. Ce projet vise à offrir une interface conviviale pour parcourir et afficher des informations détaillées sur chaque Pokémon, comme leur nom,
 type, statistiques et autres caractéristiques.
 
+## Aperçu
+
+![Description de l'image](public/gif-pokedex.gif)
+
 ## Prérequis
 
 Commencez par installer express, et toute autre dépendance nécessaire avec npm

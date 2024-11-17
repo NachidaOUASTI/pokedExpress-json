@@ -45,8 +45,9 @@ app.get('/types/:type', (request, response) => {
 
 // écoute du serveur (sera ignorée par Vercel, mais utile pour les tests en local)
 if (require.main === module) {
-    app.listen(process.env.PORT || 3000, () => {
-        console.log(`Server running on port ${process.env.PORT || 3000}`);
+    const port = process.env.PORT || 3000; // Définir le port à utiliser
+    app.listen(port, () => {
+        console.log(`Server running at http://localhost:${port}`); // Afficher l'URL complète
     });
 }
 
